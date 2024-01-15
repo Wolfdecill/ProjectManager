@@ -2,18 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CssPages/Login.css">
     <title>Login</title>
 </head>
 <body>
-    <div id="topBar">
-        <button>Register</button>
-        <button>Login</button>
+    <div class="topBar">
+        <button onclick="detailsBlock('registerBlock')">Register</button>
+        <button onclick="detailsBlock('loginBlock')">Login</button>
     </div>
-    <div id="signUp">
 
-    </div>
-    <div id="login">
+    <form id="registerBlock" class="DetailsBlock" action="../java/Servlets/Login_Servlet.java" method="POST">
+        <label>Username: <input type="text" name="username"></label> <br>
+        <label>Password: <input type="password" name="password"></label> <br>
+        <label>Confirm Password: <input type="password" name="cPassword"></label> <br>
+        <button name="submit" type="submit" value="Register">Register</button>
+    </form>
 
-    </div>
+    <form id="loginBlock" class="DetailsBlock" action="../java/Servlets/Login_Servlet.java" method="POST">
+        <label>Username: <input type="text" name="username"></label> <br>
+        <label>Password: <input type="password" name="password"></label> <br>
+        <button name="submit" type="submit" value="Login">Login</button>
+    </form>
 </body>
 </html>
+
+<script>
+    // This function controls opening and closing of class 'DetailsBlock' 
+    // through its display property   
+    function detailsBlock(blockType){
+        const detailsBlock = document.querySelectorAll('.DetailsBlock');
+        detailsBlock.forEach(clossDetailsBlock);
+        document.getElementById(blockType).style.display= "flex";
+    };
+    
+    // This function is used by: 'function detailsBlock(blockType)'
+    // and is responsible for the closing part of the class
+    // (function called by the foreach)
+    function clossDetailsBlock(idOfClasses){
+        idOfClasses.style.display="none";
+    }
+</script>

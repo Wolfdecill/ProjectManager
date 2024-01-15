@@ -1,0 +1,107 @@
+:root{
+    --light-mode:white;
+    --light-mode-text: black;
+    --dark-mode: black;
+    --dark-mode-text: white;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    background-color: var(--dark-mode);
+    overflow-y: hidden;
+}
+
+
+.sideBar{
+    /* Dimentions of sideBar */
+    width: min-content;
+    height: 100vh;
+    padding: 10px;
+    
+    /* Colour of sideBar */
+    background-color: transparent;
+    
+    /* Text colour of sideBar */
+    color: var(--dark-mode-text);
+}
+.sideBar a{
+    /* Colours of sideBar button */
+    background-color: inherit;
+    color: inherit;
+    
+    /* Look of sideBar button */
+    border: none;
+    display: block;
+    margin: 10px;
+    white-space: nowrap;
+}
+.sideBar a :hover{
+    border-bottom: 1px solid var(--dark-mode-text);
+}
+.sideBar .catogorySeporater{
+    display: block;
+    margin: 10px;
+    border-top: 1px solid var(--dark-mode-text);
+}
+
+
+.projectDisplay{
+    width: -webkit-fill-available;
+    /* Colour of projectDisplay */
+    background-color: transparent;   
+    color: var(--dark-mode-text);
+    
+    /* Overflow of projectDisplay */
+    
+}
+.projectDisplay .projectLink{
+    /* Size of .projectLink of projectDisplay */
+    margin-bottom: 5px;
+    height: min-content;
+    
+    /* Look of .projectLink of projectDisplay */
+    display: flex;
+    padding: 10px;
+    border: 2px solid var(--dark-mode-text);
+    border-radius: 20px;
+
+    /* Colour of text for projectDisplay */
+    color: inherit;
+    
+    /* Text display of .projectLink of projectDisplay */
+    text-decoration: none;   
+}
+.projectDisplay .image{
+    /* Size of image for .image of projectDisplay  */
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    
+    /* Image property changes for .image of projectDisplay */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    
+    /* Pointer events of .image of projectDisplay */
+    pointer-events: none;
+}
+.projectDisplay .title{
+    /*Font changes for .title of projectDisplay */
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+    /* Pointer events of .title of projectDisplay */
+    pointer-events: none;
+    
+}
+.projectDisplay .discription{
+    
+    /* Pointer events of .title of projectDisplay */
+    pointer-events: none;    
+}
+.projectDisplay :hover{
+    color: var(--dark-mode);
+    background-color: var(--dark-mode-text);
+}

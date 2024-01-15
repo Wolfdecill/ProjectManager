@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    background-image: url("../ProjectManager/Pictures/LoginPagePicture.jpg");
+    background-size: cover;
+}
+
+
+.topBar{
+    /* Size of topBar */
+    height: 50px;
+    max-width: 100%;
+    
+    /* Positioning of topBar's elements' */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 5px;
+}
+.topBar button{
+    /* Size of topBar's buttons */
+    width: 120px;
+    max-width: 10%;
+    height: 80%;
+    
+    /* Space between topBar's buttons */
+    margin-left: 1%;
+    
+    /* Appirance of topBar's buttons */
+    background-color: inherit;
+    color: white;
+    border: solid white 1px;
+}
+.topBar button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.DetailsBlock{
+    display: none;
+    
+    /* Postioning and size of detailsBlock */
+    block-size: fit-content;
+    min-block-size: 450px;
+    width: fit-content;
+    transform:  translate(50%,3%);
+    
+    /* Appirance of detailsBlock */
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 50px black ;
+    padding: 20px;
+    
+    /* Where items inside of detailsBlock are positioned */
+    flex-direction: column;
+    align-items: self-end;
+}
+.DetailsBlock label{
+    color: white;
+    font-family: fantasy;
+    font-size: large;
+}
